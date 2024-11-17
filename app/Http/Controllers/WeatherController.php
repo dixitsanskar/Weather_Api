@@ -24,6 +24,8 @@ class WeatherController extends Controller
 
         if(!$weatherData){
             try{
+                Log::error("Weather city not in cache:");
+
                 
                 $apiKey = \env('API_KEY');
                 $apiUrl = \env('API_URL')."{$city}?key={$apiKey}";
