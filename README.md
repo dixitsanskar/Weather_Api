@@ -1,3 +1,5 @@
+ https://weather-api-omega-eight.vercel.app/
+
 # Weather API Project
 
 This project is a simple weather API built using Laravel. It allows users to register, log in, and obtain a unique API key. Users can make up to **100 requests per month** to fetch weather data for a specific city.
