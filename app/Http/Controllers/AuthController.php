@@ -71,12 +71,17 @@ class AuthController extends Controller
             $user = User::where('email',$request->email)->first();
 
             return \response()->json(['status' => true,
-            'message' => 'User Logged In Successfully'],200);
+            'message' => 'User Logged In Successfully', "token" => $user->api_token],200);
 
         }catch(Throwable $th){
         return \response()->json(['status' => false,
         'message' => $th->getMessage()],500);
 
         }
+    }
+
+    public function me()
+    {
+
     }
 }

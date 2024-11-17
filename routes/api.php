@@ -12,3 +12,4 @@ Route::get('/user', function (Request $request) {
 
 Route::get('/weather/{city}', [WeatherController::class, 'getWeather'] )->middleware(['auth:sanctum','apiLimit']);
 Route::post('/register',[AuthController::class, 'register']);
+Route::post('/login',[AuthController::class, 'login']);
