@@ -17,7 +17,7 @@ class WeatherController extends Controller
     //
     public function getWeather($city)
     {
-        $user= Auth::user();
+        // $user= Auth::user();
         $cacheKey = "weather_{$city}";
 
         $weatherData = Cache::get($cacheKey);
@@ -45,7 +45,7 @@ class WeatherController extends Controller
                 return \response()->json(['error'=> 'An error occurred while fetching data'],501);
             }
         }
-        $this->makeIncrementApiRequest($user->id);
+        // $this->makeIncrementApiRequest($user->id);
 
         return \response()->json($weatherData);
     }
@@ -54,10 +54,9 @@ class WeatherController extends Controller
         $currentMonth = now()->startOfMonth();
 
         $userExisit = ApiRequest::where('user_id',$userId);
-        if($userExisit)
-        {
-            $apiRequest = ApiRequest::firstOrCreate(['user_id' => $userId, 'month'=> $currentMonth],['request_count'=> 0]);
-        }
+      
+         ApiRequest::firstOrCreate(['user_id' => $userId, 'month'=> $currentMonth],['request_count'=> 0]);
+  
 
         // $apiRequest = ApiRequest::firstOrCreate(['user_id' => $userId, 'month'=> $currentMonth],['request_count'=> 0]);
 
