@@ -2,13 +2,15 @@
 
 namespace App\Models;
 
+use MongoDB\Laravel\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
 
 class ApiRequest extends Model
 {
     //
     use HasFactory;
+    protected $connection = 'mongodb';
+
     
     protected $fillable=['user_id', 'request_count', 'month'];
 }

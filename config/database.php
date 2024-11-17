@@ -33,7 +33,7 @@ return [
         'mongodb' => [
             'driver' => 'mongodb',
             'dsn' => env('DB_URI', 'mongodb+srv://3000'),
-            'database' => 'shortlinks',
+            'database' => 'weatherapi',
             ],
         'sqlite' => [
             'driver' => 'sqlite',
