@@ -16,7 +16,7 @@
         const email = document.getElementById('login-name').value;
         const password = document.getElementById('login-password').value;
 
-        axios.post('/api/login', {
+        axios.post('/api/api/login', {
             email: email,
             password: password,
         })
@@ -41,7 +41,7 @@
         const password = document.getElementById('sign-password').value;
         const name = document.getElementById('sign-name').value;
 
-        axios.post('/api/register', {
+        axios.post('/api/api/register', {
             email: email,
             password: password,
             name: name
