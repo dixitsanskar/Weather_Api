@@ -100,7 +100,7 @@ bash
 ---
 
 ## Project URL
-The live project can be accessed at: [a link](https://weather-api-omega-eight.vercel.app/)
+The live project can be accessed at: [project URL](https://weather-api-omega-eight.vercel.app/)
 
 
 ---
