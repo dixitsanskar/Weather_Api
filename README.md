@@ -27,7 +27,7 @@ This project is a simple weather API built using Laravel. It allows users to reg
 1. Clone the repository:
    
 bash
-   git clone https://github.com/your-username/weather-api.git
+   git clone https://github.com/dixitsanskar/weather-api.git
    cd weather-api
   
 
